@@ -1,0 +1,25 @@
+---
+import LogoFestival from "../assets/logo-festival_cinemagny.svg";
+---
+
+<header
+    class="flex items-center justify-between px-6 py-4 bg-blue-500 text-white"
+>
+    <a href="/">
+        <img
+            src={LogoFestival.src}
+            alt="Logo Festival Cinémagny"
+            class="h-12 w-auto"
+        />
+    </a>
+
+    <nav class="flex gap-6">
+        <a href="/" class="hover:underline">Accueil</a>
+        <a href="/festival" class="hover:underline">Festival</a>
+        <a href="/programme" class="hover:underline">Programme</a>
+        <a href="/invites" class="hover:underline">Invités</a>
+        <a href="/infos-pratiques" class="hover:underline">Infos Pratiques</a>
+        <a href="/billetterie" class="hover:underline">Billetterie</a>
+        <a href="/contact" class="hover:underline">Contact</a>
+    </nav>
+</header>

@@ -1,11 +1,57 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import LogoFestival from "../assets/logo-festival_cinemagny.svg";
+import IconUFC from "../assets/icon-ufc.png";
+import IconMontain from "../assets/icon-montain.png";
 ---
 
+
 <Layout>
-	<Welcome />
+	<!-- Inclusion du Header -->
+	<Header />
+
+	<main>
+		<!-- Bandeau d'accueil -->
+		<section class="hero">
+			<img src={LogoFestival.src} alt="Festival Cinémagny" />
+			<h1>Festival Cinémagny</h1>
+			<p>Du 12 au 16 novembre 2025</p>
+			<a href="/billetterie" class="button">Réserver vos billets</a>
+		</section>
+
+		<!-- Aperçu des sections -->
+		<section class="sections-preview">
+			<div>
+				<h2>Programme</h2>
+				<p>Découvrez les films et activités proposés.</p>
+				<a href="/programme">En savoir plus</a>
+			</div>
+
+			<div>
+				<h2>Invités</h2>
+				<p>Rencontrez nos réalisateurs et acteurs invités.</p>
+				<a href="/invites">En savoir plus</a>
+			</div>
+
+			<div>
+				<h2>Infos Pratiques</h2>
+				<p>Tout ce qu'il faut savoir pour venir au festival.</p>
+				<a href="/infos-pratiques">En savoir plus</a>
+			</div>
+		</section>
+
+		<!-- Partenaires -->
+		<section class="partenaires">
+			<h2>Nos Partenaires</h2>
+			<div>
+				<a href="https://www.iut-nfc.univ-fcomte.fr/">
+					<img src={IconUFC.src} alt="UFC Nord Franche-Comté" />
+				</a>
+				<a href="https://www.vosges.fr/">
+					<img src={IconMontain.src} alt="Vosges" />
+				</a>
+			</div>
+		</section>
+	</main>
 </Layout>
