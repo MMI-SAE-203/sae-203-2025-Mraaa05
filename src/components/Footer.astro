@@ -1,8 +1,8 @@
 ---
 import LogoFestival from "../assets/logo-festival_cinemagny.svg";
-import Facebook from "../assets/IconFacebook.svg";
-import Instagram from "../assets/IconInstagram.svg";
-import Twitter from "../assets/IconTwitter.svg";
+import Facebook from "../assets/IconFacebook.svg?raw";
+import Instagram from "../assets/IconInstagram.svg?raw";
+import Twitter from "../assets/IconTwitter.svg?raw";
 ---
 
 <footer
@@ -26,13 +26,12 @@ import Twitter from "../assets/IconTwitter.svg";
             <h4 class="uppercase font-semibold">Festival</h4>
             <ul class="text-gray-300 space-y-2">
                 <li>
-                    <a href="/festival" class="hover:text-secondary">À propos</a
-                    >
+                    <a href="/festival" class="hover:text-secondary"
+                        >À propos</a>
                 </li>
                 <li>
                     <a href="/programme" class="hover:text-secondary"
-                        >Programme</a
-                    >
+                        >Programme</a>
                 </li>
                 <li>
                     <a href="/invites" class="hover:text-secondary">Invités</a>
@@ -45,48 +44,13 @@ import Twitter from "../assets/IconTwitter.svg";
             <ul class="text-gray-300 space-y-2">
                 <li>
                     <a href="/infos-pratiques" class="hover:text-secondary"
-                        >Accès & Transport</a
-                    >
+                        >Accès & Transport</a>
                 </li>
                 <li>
                     <a href="/hebergement" class="hover:text-secondary"
-                        >Hébergement</a
-                    >
+                        >Hébergement</a>
                 </li>
                 <li><a href="/faq" class="hover:text-secondary">FAQ</a></li>
-            </ul>
-        </div>
-
-        <div>
-            <h4 class="uppercase font-semibold">Billetterie</h4>
-            <ul class="text-gray-300 space-y-2">
-                <li>
-                    <a href="/billetterie" class="hover:text-secondary"
-                        >Acheter des billets</a
-                    >
-                </li>
-                <li>
-                    <a href="/tarifs" class="hover:text-secondary">Tarifs</a>
-                </li>
-                <li>
-                    <a href="/conditions" class="hover:text-secondary"
-                        >Conditions</a
-                    >
-                </li>
-            </ul>
-        </div>
-
-        <div>
-            <h4 class="uppercase font-semibold">Contact</h4>
-            <ul class="text-gray-300 space-y-2">
-                <li>
-                    <a href="/contact" class="hover:text-secondary"
-                        >Nous contacter</a
-                    >
-                </li>
-                <li>
-                    <a href="/support" class="hover:text-secondary">Support</a>
-                </li>
             </ul>
         </div>
     </nav>
@@ -97,19 +61,19 @@ import Twitter from "../assets/IconTwitter.svg";
         </p>
         <ul class="flex gap-6">
             <li>
-                <a href="https://facebook.com" aria-label="Facebook"
-                    ><Facebook class="h-6 w-6" /></a
-                >
+                <a href="https://facebook.com" aria-label="Facebook">
+                    <span set:html={Facebook} />
+                </a>
             </li>
             <li>
-                <a href="https://instagram.com" aria-label="Instagram"
-                    ><Instagram class="h-6 w-6" /></a
-                >
+                <a href="https://instagram.com" aria-label="Instagram">
+                    <span set:html={Instagram} />
+                </a>
             </li>
             <li>
-                <a href="https://twitter.com" aria-label="Twitter"
-                    ><Twitter class="h-6 w-6" /></a
-                >
+                <a href="https://twitter.com" aria-label="Twitter">
+                    <span set:html={Twitter} />
+                </a>
             </li>
         </ul>
     </div>
