@@ -4,7 +4,11 @@ export default {
     theme: {
         extend: {
             colors: {
-                skyblue: "#87CEEB", // Bleu ciel
+                primary: "#1E40AF", // Bleu foncé
+                secondary: "#FACC15", // Jaune festival
+                skyblue: "#87CEEB",  // Bleu ciel
+                dark: "#1A1A1A",
+                light: "#F9FAFB",
             },
             fontFamily: {
                 playfair: ["Playfair Display", "serif"],
@@ -14,3 +18,4 @@ export default {
     },
     plugins: [],
 };
+

@@ -1,14 +1,55 @@
 ---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
 
+const { title } = Astro.props;
 ---
 
+<!doctype html>
 <html lang="fr">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Festival Cinémagny</title>
+		<title>
+			{title ? `${title} — Festival Cinémagny` : "Festival Cinémagny"}
+		</title>
+
+		<!-- SEO Meta -->
+		<meta
+			name="description"
+			content="Festival Cinémagny - Le rendez-vous du cinéma indépendant dans un cadre exceptionnel."
+		/>
+		<meta
+			name="keywords"
+			content="Festival, Cinéma, Films, Indépendant, Cinémagny"
+		/>
+		<meta name="author" content="Festival Cinémagny" />
+
+		<!-- Icônes -->
+		<link rel="icon" type="image/png" href="/assets/favicon/favicon.png" />
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="/assets/favicon/apple-touch-icon.png"
+		/>
+
+		<!-- Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap"
+			rel="stylesheet"
+		/>
 	</head>
-	<body>
-		<slot />
+
+	<body class="bg-skyblue text-gray-900 font-poppins">
+		<Header />
+
+		<main class="container mx-auto p-6">
+			<slot />
+		</main>
+
+		<Footer />
 	</body>
 </html>
